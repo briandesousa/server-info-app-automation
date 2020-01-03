@@ -80,7 +80,7 @@ sudo chmod -R 755 $SERVER_BLOCK_PATH
 
 # TODO download React UI package from CI system and expand it to server block path
 # TODO if Git is required for deployment, check and install with `sudo apt-get install git` first
-sudo echo "Future server-info-app React UI" > $SERVER_BLOCK_PATH/index.html
+sudo echo "Future server-info-app React UI" > $SERVER_BLOCK_PATH/html/index.html
 
 # enable and test Nginx server block configuration
 sudo cp ./nginx-server-block-config /etc/nginx/sites-available/$APP_NAME
