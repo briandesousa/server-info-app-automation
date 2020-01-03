@@ -11,6 +11,7 @@
 #   sudo apt-get install git
 #   git clone https://github.com/briandesousa/server-info-app-automation.git
 #   cd server-info-app-automation
+#   sudo chmod +x install.sh
 #   sudo ./install.sh
 ###
 
@@ -34,6 +35,8 @@ then
     sudo apt-get remove --purge nginx -y
     sudo apt-get autoremove -y
     sudo rm -rf /var/www/$APP_NAME
+    sudo rm -rf /etc/nginx/sites-available/$APP_NAME
+    sudo rm -rf /etc/nginx/sites-enabled/$APP_NAME
   fi
 fi
 
