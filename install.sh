@@ -1,12 +1,17 @@
 ###
-# Install Nginx, Gunicor (WSGI server) and Flask.
-# This script must be run as superuser.
+# Install Nginx, Gunicor (WSGI server) and Flask. This script must be **run as superuser**.
 #
-# Run fresh setup:
+# To run the automation for the first time:
 #   sudo ./install.sh
 #
-# Remove existing installation first:
+# To re-run the automation and remove a previous installation first:
 #   sudo ./install.sh uninstallfirst
+#
+# Example of running automation from this repository on fresh Ubuntu installation:
+#   sudo apt-get install git
+#   git clone https://github.com/briandesousa/server-info-app-automation.git
+#   cd server-info-app-automation
+#   sudo ./install.sh
 ###
 
 APP_NAME="server-info-app"
@@ -71,6 +76,7 @@ sudo chown -R $USER:$USER $SERVER_BLOCK_PATH
 sudo chmod -R 755 $SERVER_BLOCK_PATH
 
 # TODO download React UI package from CI system and expand it to server block path
+# TODO if Git is required for deployment, check and install with `sudo apt-get install git` first
 sudo echo "Future server-info-app React UI" > $SERVER_BLOCK_PATH/index.html
 
 # enable and test Nginx server block configuration
