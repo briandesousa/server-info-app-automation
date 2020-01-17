@@ -6,6 +6,24 @@ This repository contains all scripts necessary to automatically setup all server
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for a summary of how the server-info-app is structure.
 
+## Installation
+
+To install the server-info-app on a fresh Ubuntu installation:
+
+```shell
+git clone https://github.com/briandesousa/server-info-app-automation.git
+cd server-info-app-automation
+sudo ./install.sh
+```
+
+To remove and re-install the server-info-app:
+
+```shell
+git clone https://github.com/briandesousa/server-info-app-automation.git
+cd server-info-app-automation
+sudo ./install.sh uninstallfirst
+```
+
 ## Nginx server information
 
 Important information about the Nginx server used to host the **server-info-app**.
